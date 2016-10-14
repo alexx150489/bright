@@ -1,0 +1,37 @@
+.main-content
+	container()
+	clearfix()
+	
+.main-content__main-title
+	font-family $font
+	text-align center
+	color $main-color
+	margin 0
+	margin-bottom 50px
+	
+	
+.main-content__main-title span
+	color $alt-color
+	
+	
+.main-content__filter-list
+	unstyledlist()
+	font-size 0
+	text-align center
+	
+.main-content__filter-item
+	display inline-block
+	vertical-align top
+	font-size 14px
+	line-height 14px
+	color $main-color
+	text-transform uppercase
+	margin-right 5px
+
+.main-content__filter-link
+	color $main-color
+	&:hover
+		color $alt-color
+	
+.main-content__filter-link.active 
+	color $alt-color
