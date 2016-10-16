@@ -13,6 +13,8 @@
 .main-content__main-title span
 	color $alt-color
 	
+.main-content__filter
+	margin-bottom 36px
 	
 .main-content__filter-list
 	unstyledlist()
@@ -30,8 +32,87 @@
 
 .main-content__filter-link
 	color $main-color
+	transition-duration 0.3s
 	&:hover
 		color $alt-color
 	
 .main-content__filter-link.active 
 	color $alt-color
+	
+.main-content__gallery-wrapper
+	max-width 480px
+	margin 0 auto
+	clearfix()
+
+
+.main-content__gallery-item
+	position relative
+	float left
+	width 218px
+	margin-right 28px
+	margin-bottom 47px
+	&:nth-child(2n)
+		margin-right 0
+	&::after
+		content ''
+		position absolute
+		width 37px
+		height 37px
+		top: 181px;
+		left: 151px;
+		background-color $alt-color
+		border 10px solid rgba(92, 91, 91, 0.3)
+		border-radius 50%
+		background $alt-color url(../img/magnifier.png) center no-repeat
+		background-clip: padding-box;
+		cursor pointer
+		
+		
+		
+
+.main-content__gallery-title
+	font-family $font
+	font-size 16px
+	line-height 16px
+	color $title-color
+	margin-bottom 6px
+
+.main-content__gallery-type
+	font-family $font
+	font-size 12px
+	line-height 12px
+	color $main-color
+	margin-bottom 13px
+
+.main-content__gallery-image
+	width 218px
+	height 173px
+	background-color lightblue
+	
+@media $middle-width
+	.main-content__gallery-wrapper
+		max-width 726px
+		
+	.main-content__gallery-item
+		&:nth-child(2n)
+			margin-right 28px
+		&:nth-child(3n)
+			margin-right 0
+		
+	.main-content__gallery-image
+		background-color lightgreen
+
+
+@media $max-width
+	.main-content__gallery-wrapper
+		max-width 960px
+		
+	
+	.main-content__gallery-item
+			&:nth-child(3n)
+				margin-right 28px
+			&:nth-child(4n)
+				margin-right 0
+	
+	.main-content__gallery-image
+		background-color SandyBrown

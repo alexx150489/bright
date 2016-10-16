@@ -18,7 +18,7 @@
 	width 120px
 	height 120px
 	top -11px
-	left 0
+	left 10px
 	background url(../img/header-logo.png) 0 0 no-repeat
 	float: left
 	
@@ -33,7 +33,7 @@
 .main-header__list-item
 	display inline-block
 	vertical-align top
-	margin-right 38px
+	margin-right 17px
 	font-family $font
 	font-size 18px
 	line-height 18px
@@ -50,7 +50,8 @@
 	&:hover
 		color $alt-color
 	
-.main-header__social-menu 
+.main-header__social-menu
+	display none
 	float: right
 
 .main-header__social-list
@@ -87,6 +88,17 @@
 	
 .main-header__social-link.rss
 	background url('../img/sprite.png') -256px -5px no-repeat
+
+
+@media $middle-width
+	.main-header__list-item
+		margin-right 35px
+		
+
+
+@media $max-width
+	.main-header__social-menu
+		display block
 	
 
 	 
