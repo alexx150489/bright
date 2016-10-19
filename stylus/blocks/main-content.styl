@@ -51,6 +51,7 @@
 	width 218px
 	margin-right 28px
 	margin-bottom 47px
+	
 	&:nth-child(2n)
 		margin-right 0
 	&::after
@@ -88,6 +89,91 @@
 	width 218px
 	height 173px
 	background-color lightblue
+	box-shadow 0px 0px 26px -3px rgba(110,107,110,1)
+
+.main-content__paginator
+	margin-top: 40px;
+	margin-bottom 78px
+	text-align center
+	
+.main-content__paginator-list
+	unstyledlist()
+	font-size 0
+	
+.main-content__paginator-item
+	display inline-block
+	vertical-align top
+	border 1px solid $title-color
+	border-radius 2px
+	margin-right 4px
+	&:last-child
+		margin-right 0
+	
+.main-content__paginator-link
+	display block
+	width 20px
+	height 20px
+	font-family $font
+	font-size 12px
+	line-height 20px
+	color $main-color
+	text-align center
+	transition-duration 0.3s
+	&:hover
+		color $alt-color
+	
+
+.main-content__paginator-link.to-start
+	height 15px
+	background linear-gradient(to bottom, #f6f8f9 0%,#e5ebee 42%,#d7dee3 63%,#f5f7f9 100%)
+	&::after
+		content ''
+		display block
+		width: 14px;
+		height: 11px;
+		background url('../img/sprite.png') -76px -5px no-repeat
+		margin 0 auto
+		margin-top 5px
+
+.main-content__paginator-link.prev
+	height 15px
+	background linear-gradient(to bottom, #f6f8f9 0%,#e5ebee 42%,#d7dee3 63%,#f5f7f9 100%)
+	&::after
+		content ''
+		display block
+		width: 8px;
+		height: 11px;
+		background url('../img/sprite.png') -5px -5px no-repeat
+		margin 0 auto
+		margin-top 5px
+
+.main-content__paginator-link.to-end
+	height 15px
+	background linear-gradient(to bottom, #f6f8f9 0%,#e5ebee 42%,#d7dee3 63%,#f5f7f9 100%)
+	&::after
+		content ''
+		display block
+		width: 14px;
+		height: 11px;
+		background url('../img/sprite.png') -100px -5px no-repeat
+		margin 0 auto
+		margin-top 5px		
+
+.main-content__paginator-link.next
+	height 15px
+	background linear-gradient(to bottom, #f6f8f9 0%,#e5ebee 42%,#d7dee3 63%,#f5f7f9 100%)
+	&::after
+		content ''
+		display block
+		width: 8px;
+		height: 11px;
+		background url('../img/sprite.png') -23px -5px no-repeat
+		margin 0 auto
+		margin-top 5px	
+
+.main-content__paginator-link.active
+	color $alt-color
+	
 	
 @media $middle-width
 	.main-content__gallery-wrapper
@@ -116,3 +202,4 @@
 	
 	.main-content__gallery-image
 		background-color SandyBrown
+		
